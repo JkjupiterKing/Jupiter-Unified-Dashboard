@@ -1,6 +1,6 @@
-package com.Jupiter_Unified_Dashboard_api.repo;
+package Jupiter_Unified_Dashboard_api.repo;
 
-import com.Jupiter_Unified_Dashboard_api.model.User;
+import Jupiter_Unified_Dashboard_api.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 

@@ -1,4 +1,4 @@
-package com.Jupiter_Unified_Dashboard_api.model;
+package Jupiter_Unified_Dashboard_api.model;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -13,6 +13,7 @@ import java.time.LocalDateTime;
 @Setter
 @ToString
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;

@@ -1,7 +1,7 @@
-package com.Jupiter_Unified_Dashboard_api.controller;
+package Jupiter_Unified_Dashboard_api.controller;
 
-import com.Jupiter_Unified_Dashboard_api.model.User;
-import com.Jupiter_Unified_Dashboard_api.repo.Userrepo;
+import Jupiter_Unified_Dashboard_api.model.User;
+import Jupiter_Unified_Dashboard_api.repo.Userrepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
