@@ -75,6 +75,23 @@ public class Usercontroller {
         return ResponseEntity.ok(user.get());
     }
 
+    // Forgot password endpoint to update the password (without OTP)
+    @PostMapping("/forgot-password")
+    public ResponseEntity<String> forgotPassword(@RequestParam String email, @RequestParam String newPassword) {
+        Optional<User> user = userRepository.findByEmail(email);
+
+        if (user.isEmpty()) {
+            return ResponseEntity.badRequest().body("User not found with the provided email.");
+        }
+
+        // Encode the new password to Base64 before saving
+        User existingUser = user.get();
+        existingUser.setPassword(encodePassword(newPassword));
+        userRepository.save(existingUser);
+
+        return ResponseEntity.ok("Password has been successfully updated.");
+    }
+
     // Helper method to encode the password to Base64
     private String encodePassword(String password) {
         return Base64.getEncoder().encodeToString(password.getBytes());

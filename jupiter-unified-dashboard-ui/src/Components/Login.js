@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google"; // Import both GoogleOAuthProvider and GoogleLogin
+import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 import "./Login.css";
 
 // Your Google Client ID
-const CLIENT_ID = "YOUR_GOOGLE_CLIENT_ID"; // Replace with your actual Google Client ID
+const CLIENT_ID =
+  "148450761791-o18b898tk369thnhdg6fajmftrjlq03b.apps.googleusercontent.com";
 
 const Login = () => {
-  const navigate = useNavigate(); // For navigation after successful login
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -61,11 +62,7 @@ const Login = () => {
   };
 
   return (
-    <GoogleOAuthProvider
-      clientId={
-        "148450761791-o18b898tk369thnhdg6fajmftrjlq03b.apps.googleusercontent.com"
-      }
-    >
+    <GoogleOAuthProvider clientId={CLIENT_ID}>
       <div className="auth-container d-flex align-items-center justify-content-center">
         <div className="auth-box shadow-lg">
           <h2 className="text-center mb-4 fw-bold">Login</h2>
